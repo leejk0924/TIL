@@ -126,13 +126,4 @@ _Single underscore_
 <!-- Code 입력(문장 내) -->
 This is how `code` works.
 
-<!-- Code 입력(블록) -->
-```
-def say_hello():
-    return "hello"
 
-```
-
-
-
-림
