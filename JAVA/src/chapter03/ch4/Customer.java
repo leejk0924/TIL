@@ -16,6 +16,9 @@ public class Customer {
     public Customer(int customerID, String customerName) {
         this.customerID = customerID;
         this.customerName = customerName;
+
+        customerGrade = "SILVER";
+        bonusRatio = 0.01;
     }
 
     public int calcPrice(int price) {
