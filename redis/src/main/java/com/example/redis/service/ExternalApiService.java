@@ -1,9 +1,11 @@
 package com.example.redis.service;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 @Service
 public class ExternalApiService {
+    @Cacheable(cacheNames = "userName", key = "#userId", unless = "#userId == null")
     public String getUserName(String userId) {
         // 외부 서비스나 DB 호출
         try {
@@ -16,6 +18,7 @@ public class ExternalApiService {
         if(userId.equals("B")) return "Bob";
         return "";
     }
+    @Cacheable(cacheNames = "userAge", key = "#userId", unless = "#userId == null")
     public int getUserAge(String userId) {
         // 외부 서비스나 DB 호출
         try {
